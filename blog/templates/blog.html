@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{%block title%} {{post.title}} {% endblock %}
+
+{% block content %}
+    <main class="main-blog">
+    <div class="main-blog__content">
+        <img src="{{ post.image.url }}" alt="">
+
+        <article class="blog-content__article">
+            <h4>Noticias</h4>
+            <h1>{{ post.title }}</h1>
+            
+            <div>
+                {{ post.content|safe }}<!--Con |safe guardamos lo que hicimos en el ckeditor-->
+            </div>
+
+        </article>
+    </div>
+    </main>
+{% endblock %}
+
+

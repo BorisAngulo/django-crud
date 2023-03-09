@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{%block title%} Mi perfil {% endblock %}
+
+{% block content %}
+    <main>
+    <section class="profile">
+        <div class="profile-img">
+            <img src="{% static 'img/profile-pic.jpg' %}" alt="">
+        </div>
+        <div class="profile-info">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id hic vero delectus unde minus dolorem
+                incidunt recusandae porro debitis sint consequatur corrupti tempora ipsam laborum error, est
+                veritatis pariatur natus.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects-container">
+        <h3>Proyectos</h3>
+
+        {% for project in projects %}
+        <div class="project">
+            <h4>{{project.title}}</h4>
+            <p>
+                {{project.desc}}
+            </p>
+        </div>
+        {% endfor %}
+       
+
+    </section>
+    </main>
+{% endblock %}
