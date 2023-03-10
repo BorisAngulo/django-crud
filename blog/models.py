@@ -2,7 +2,7 @@ from django.db import models
 
 
 
-# Create your models here. a
+# Create your models here. 
 class Post(models.Model):#heredamos para crear un modela de db
     image = models.ImageField(verbose_name='Imagen', upload_to='blog') #con verbose_name es como se mostrara en el editor y con upload_to hacemos que las imganens se guarden el img y carptea blog
     title = models.CharField(max_length=200, verbose_name='Título')
